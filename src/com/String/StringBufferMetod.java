@@ -1,4 +1,4 @@
-package com.wrapper;
+package com.String;
 
 public class StringBufferMetod {
     public static void main(String[] args) {

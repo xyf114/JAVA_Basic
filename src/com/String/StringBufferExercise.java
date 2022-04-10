@@ -1,4 +1,4 @@
-package com.wrapper;
+package com.String;
 
 import java.util.Scanner;
 

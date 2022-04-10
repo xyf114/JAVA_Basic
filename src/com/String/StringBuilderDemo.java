@@ -1,4 +1,4 @@
-package com.wrapper;
+package com.String;
 /*
 * StringBuilder没有线程安全
 * 在单线程中效率高于StringBuffer
