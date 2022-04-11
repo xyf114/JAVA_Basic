@@ -17,7 +17,7 @@ public class ArraySortCustom {
         });
         System.out.println(Arrays.toString(arr));
     }
-
+//冒泡排序
     public static void sort_bubble(int [] arr){
         int tmp = 0;
         for (int i = 0; i < arr.length - 1; i++){
