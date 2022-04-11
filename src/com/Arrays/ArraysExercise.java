@@ -6,20 +6,41 @@ import java.util.Comparator;
 public class ArraysExercise {
     public static void main(String[] args) {
         Book[] books = new Book[4];
-        books[0] = new Book("红楼梦", 100);
-        books[1] = new Book("金瓶梅", 90);
-        books[2] = new Book("青年文摘", 5);
-        books[3] = new Book("JAVA", 300);
+        books[0] = new Book("红楼梦", 100.0);
+        books[1] = new Book("金瓶梅", 90.0);
+        books[2] = new Book("青年文摘", 5.0);
+        books[3] = new Book("JAVA入门", 300.0);
 
-        ArraysExercise.sort(books, new Comparator() {
+//        ArraysExercise.sort(books, new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//                Book b1 = (Book) o1;
+//                Book b2 = (Book) o2;
+//                return b2.price - b1.price;
+//            }
+//        });
+
+//        Arrays.sort(books, new Comparator<Book>() {
+//            @Override
+//            public int compare(Book o1, Book o2) {
+//                if (o1.price > o2.price)
+//                    return 1;
+//                else if (o1.price < o2.price)
+//                    return -1;
+//                else return 0;
+//            }
+//        });
+
+        Arrays.sort(books, new Comparator<Book>() {
             @Override
-            public int compare(Object o1, Object o2) {
-                Book b1 = (Book) o1;
-                Book b2 = (Book) o2;
-                return b2.price - b1.price;
+            public int compare(Book o1, Book o2) {
+                if (o1.name.length() > o2.name.length())
+                    return 1;
+                else if (o1.name.length() < o2.name.length())
+                    return -1;
+                else return 0;
             }
         });
-
         System.out.println(Arrays.toString(books));
 
     }
@@ -39,9 +60,9 @@ public class ArraysExercise {
 
     public static class Book {
         private String name;
-        private Integer price;
+        private Double price;
 
-        public Book(String name, Integer price) {
+        public Book(String name, Double price) {
             this.name = name;
             this.price = price;
         }
@@ -59,7 +80,7 @@ public class ArraysExercise {
             return name;
         }
 
-        public Integer getPrice() {
+        public Double getPrice() {
             return price;
         }
 
@@ -67,7 +88,7 @@ public class ArraysExercise {
             this.name = name;
         }
 
-        public void setPrice(Integer price) {
+        public void setPrice(Double price) {
             this.price = price;
         }
     }
