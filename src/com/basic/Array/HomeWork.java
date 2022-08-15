@@ -8,12 +8,19 @@ public class HomeWork {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         int [] sort_arr = new int[arr.length + 1];
-        for (int i = 0; i < sort_arr.length; i++){
+        int index = 0;
+        for (int i = 0 ; i < arr.length; i++){
+
+        }
+        for (int i = 0, j = 0; i < arr.length; i++){
             if(arr[i] < input){
-                sort_arr[i] = arr[i];
-            } else if () {
-                
+                sort_arr[j] = arr[i];
+                j++;
             }
+        }
+
+        for (int i = 0; i < sort_arr.length; i++){
+            System.out.printf(sort_arr[i] + " ");
         }
     }
 }
