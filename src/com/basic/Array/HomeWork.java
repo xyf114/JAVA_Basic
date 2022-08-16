@@ -10,12 +10,22 @@ public class HomeWork {
         int [] sort_arr = new int[arr.length + 1];
         int index = 0;
         for (int i = 0 ; i < arr.length; i++){
-
+            if (arr[i] < input)
+                index ++;
+            else if (arr[i] >= input) {
+                break;
+            }
         }
+
+        sort_arr[index] = input;
+
         for (int i = 0, j = 0; i < arr.length; i++){
-            if(arr[i] < input){
+            if(j < index) {
                 sort_arr[j] = arr[i];
                 j++;
+            }else {
+                j++;
+                sort_arr[j] = arr[i];
             }
         }
 
